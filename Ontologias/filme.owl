@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/patrickguerra/ontologies/2021/5/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/patrickguerra/ontologies/2021/5/untitled-ontology-4"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:filme="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl">
+        <rdfs:comment xml:lang="pt">Exemplo de Ontologia sobre Filme</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#atuaEm -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#atuaEm">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#temAtor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Ator"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#dirige -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#dirige">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#temDiretor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Diretor"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#temAtor -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#temAtor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Ator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#temDiretor -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#temDiretor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Diretor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#anoDeLançamento -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#anoDeLançamento">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#dataDeNascimento -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#dataDeNascimento">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Pessoa"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Ator -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Ator">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Diretor -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Diretor">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme">
+        <rdfs:label xml:lang="pt">Filme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#LançadoEm2014 -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#LançadoEm2014">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#anoDeLançamento"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#LançadoEm2017 -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#LançadoEm2017">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#anoDeLançamento"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#LançadoEm2018 -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#LançadoEm2018">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#anoDeLançamento"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#LançadoEm2019 -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#LançadoEm2019">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#anoDeLançamento"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Pessoa -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Pessoa"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Angelina_Jolie -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Angelina_Jolie">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Ator"/>
+        <filme:atuaEm rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Malévola"/>
+        <filme:atuaEm rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Malévola:_Dona_do_Mal"/>
+        <filme:dataDeNascimento>04/06/1975</filme:dataDeNascimento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Com_Amor_Simon -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Com_Amor_Simon">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+        <filme:temDiretor rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Greg_Berlanti"/>
+        <filme:anoDeLançamento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</filme:anoDeLançamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Elle_Fanning -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Elle_Fanning">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Ator"/>
+        <filme:atuaEm rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Malévola"/>
+        <filme:atuaEm rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Malévola:_Dona_do_Mal"/>
+        <filme:dataDeNascimento>09/04/1998</filme:dataDeNascimento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Gal_Gadot -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Gal_Gadot">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Ator"/>
+        <filme:atuaEm rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Mulher-Maravilha"/>
+        <filme:dataDeNascimento>30/04/1985</filme:dataDeNascimento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Greg_Berlanti -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Greg_Berlanti">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Diretor"/>
+        <filme:dataDeNascimento>24/05/1972</filme:dataDeNascimento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Joachim_Rønning -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Joachim_Rønning">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Diretor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Malévola -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Malévola">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+        <filme:temAtor rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Angelina_Jolie"/>
+        <filme:temAtor rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Elle_Fanning"/>
+        <filme:temDiretor rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Robert_Stromberg"/>
+        <filme:anoDeLançamento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</filme:anoDeLançamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Mulher-Maravilha -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Mulher-Maravilha">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+        <filme:anoDeLançamento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</filme:anoDeLançamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Nick_Robinson -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Nick_Robinson">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Ator"/>
+        <filme:atuaEm rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Com_Amor_Simon"/>
+        <filme:dataDeNascimento>22/03/1995</filme:dataDeNascimento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Robert_Stromberg -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Robert_Stromberg">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Diretor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Animais_Fantásticos:_Os_Crimes_de_Grindelwald -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Animais_Fantásticos:_Os_Crimes_de_Grindelwald">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+        <filme:anoDeLançamento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</filme:anoDeLançamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Malévola:_Dona_do_Mal -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Malévola:_Dona_do_Mal">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Filme"/>
+        <filme:temDiretor rdf:resource="https://raw.githubusercontent.com/guerrasao/Docencia-Orientada-1/main/Ontologias/filme.owl#Joachim_Rønning"/>
+        <filme:anoDeLançamento rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</filme:anoDeLançamento>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
